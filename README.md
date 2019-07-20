@@ -2,16 +2,66 @@
 Raspberry Pi jukebox using AIY Voice Kit and Mopidy
 
 
-# Setup
+# Build
 
 Set up AIY Voice Kit:
 https://aiyprojects.withgoogle.com/voice/
 
-Install mopidy:
+Connect to Raspberry Pi using ssh following above AIY instructions.
+
+
+# Install
+
+Install Mopidy:
 https://docs.mopidy.com/en/latest/installation/debian/#debian-install
+
+Install Mopidy Spotify extension:
+```
+sudo apt-get install mopidy-spotify
+```
+
+Install virtualenv:
+```
+sudo apt-get install mopidy-virtualenv
+```
+
+
+# Configure
+
+Configure Mopidy service:
+https://docs.mopidy.com/en/latest/running/
+
+Configure radio streams:
+[...]
+
+Configure Spotify:
+[...]
+
+
+# Setup project
+
+Get repo:
+```
+cd ~/repos
+git clone 
+cd ailette
+```
+
+Install python3.7 (required for [mopidyapi](https://github.com/AsbjornOlling/mopidyapi)):
+https://gist.github.com/SeppPenner/6a5a30ebc8f79936fa136c524417761d
+
+Create a virtualenv and install python packages:
+```
+virtualenv -p python2 .ve
+. .ve/bin/activate
+pip install -r requirements.txt
+```
 
 
 # Related
+
+Multi-function standalone streaming music player using Raspberry Pi:
+https://www.pimusicbox.com/
 
 Use as wireless speaker with Spotify Connect:
 https://github.com/dtcooper/raspotify
